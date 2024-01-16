@@ -59,7 +59,7 @@ const TaskList = () => {
   const deleteTask = async (id) =>{
     try {
       await axios.delete(`${URL}/api/tasks/${id}`)
-      toast.success("Task deleted")
+      toast.warn("Task deleted")
       getTasks();
     } catch (error) {
       toast.error(error.message);
